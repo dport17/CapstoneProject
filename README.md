@@ -98,6 +98,13 @@ Below is the example of the Trello board timeline (Gantt chart) with sprint cycl
 * Guidance on how to use the different technologies
 * Regular product owner meetings
 
+# Team Activities
+* Set up Mattermost Server
+* Set up Database (AWS or Azure)
+* Set up API
+* Connect Mattermost and Database
+* Train chatbot
+
 # Use Case Diagram
 
 ![Use Case Diagram](https://trello-attachments.s3.amazonaws.com/60099e9b2e8fbb6c29146a6e/301x253/e56c2b8008bcd09ad5ae2ba0f9f12557/Capstone_II_Use_Case_Diagram.png)
