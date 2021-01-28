@@ -77,7 +77,7 @@ quickly receive an answer.
 
 # Project Management
 
-BitBucket Repository URL: <https://bitbucket.org/cps490f20-team1/cps490f20-team1.bitbucket.io/src/master//>
+BitBucket Repository URL: <https://bitbucket.org/cps491s21-team1/cps491s21t1-src/src/master/>
 
 Trello URL: <https://trello.com/b/M0fvt0rZ/cps491s21-team1/>
 
