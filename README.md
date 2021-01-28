@@ -1,29 +1,109 @@
-# README #
+University of Dayton
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Department of Computer Science
 
-### What is this repository for? ###
+CPS 491 Capstone II - Spring 2021
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+Team 1
 
-### How do I get set up? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+## Capstone II
 
-### Contribution guidelines ###
 
-* Writing tests
-* Code review
-* Other guidelines
+# Project Topic
 
-### Who do I talk to? ###
+Mattermost Chat Bot - Question Answer System
+A chatbot that will answer any questions that are asked on a Mattermost server.
 
-* Repo owner or admin
-* Other community or team contact
+
+# Team members
+
+
+1.  Sydney Jenkins, jenkinss4@udayton.edu
+2.  Devin Porter, porterd3@udayton.edu
+3.  David Puzder, puzderd1@udayton.edu
+4.  Brandon Wong, wongb2@udayton.edu
+
+
+# Company Mentors
+
+Mentors: Kathryn Rebecca Servaites, Ian Cannon, Colin Leong (colin.leong@udri.udayton.edu)
+
+Company name: UD Research Institute 
+
+## Project homepage
+
+Homepage: <https://cps490f20-team1.bitbucket.io/>
+
+
+# Overview
+
+* Send questions typed into Mattermost server to an API (provided by UDRI), receive reply from the API and post reply to the chat.
+* Save Mattermost chat from other users in the chat to the original question in the database as a possible answer to the question.
+* Organise similar questions and determine which questions received the desired answer (reply).
+
+# Project Context and Scope
+
+It is difficult to keep documentation up-to-date when working in a fast-paced environment with
+rapidly changing technologies. It is difficult to keep documentation organized and housed in a
+central location that is accessible and searchable. Our solution to this problem is to create a
+question-answer system in a chat application. This way, a researcher can type a question and
+quickly receive an answer.
+
+# High-level Requirements
+
+* Create a chatbot that will take questions from a user and send them to an API endpoint.
+* Get response from the RESTful API endpoint and display it in the chat
+* Store the questions and related answers in a database
+* The chatbot shall function in a Mattermost application
+* GitLab or GitHub repository (because private repo can be used for free) to house code and changes
+* Python programming language
+
+
+# Technology
+
+* Swagger
+* RESTful API
+* Python
+* Mattermost
+* Docker
+* Conda (Python package manager)
+* Unit and functional testing
+* GitLab
+* Database management
+* Linux, preferably Ubuntu 18 (Can install a partition on computer; use VM; Windows Subsystem for Linux)
+* VS Code (preferred IDE)
+
+
+# Project Management
+
+BitBucket Repository URL: <https://bitbucket.org/cps490f20-team1/cps490f20-team1.bitbucket.io/src/master//>
+
+Trello URL: <https://trello.com/b/M0fvt0rZ/cps491s21-team1/>
+
+We will follow the Scrum approach, thus your team needs to identify the task in each sprint cycles, team meeting schedules, including this Fall and next Spring semester. The planned schedule and sprint cycles for Spring 2021 are as follows. 
+
+![Spring 2021 Timeline](https://capstones-cs-udayton.bitbucket.io/imgs/cps491s21timeline.png "Spring 2021 Timeline")
+
+
+Below is the example of the Trello board timeline (Gantt chart) with sprint cycles but without tasks for Spring 2021: 
+
+![Spring 2021 Timeline on Trello](https://capstones-cs-udayton.bitbucket.io/imgs/trello.png "Spring 2021 Timeline")
+
+
+
+# Company Support
+
+* API endpoint in which to send the questions and receive answers
+* Guidance on how to use the different technologies
+* Regular product owner meetings
+
+# Use Case Diagram
+
+![Use Case Diagram](https://trello-attachments.s3.amazonaws.com/60099e9b2e8fbb6c29146a6e/301x253/e56c2b8008bcd09ad5ae2ba0f9f12557/Capstone_II_Use_Case_Diagram.png)
+
+
+# Use Case Descriptions
+
+![Ask Question Use Case](https://trello-attachments.s3.amazonaws.com/5faaedaf4b1bc338640acb11/6009997fffd5ef45959553d6/6824156bc97d505be7e5e802cc21b234/Screen_Shot_2021-01-21_at_10.09.11_AM.png)
+![Ask Question Use Case](https://trello-attachments.s3.amazonaws.com/5faaedaf4b1bc338640acb11/6009997fffd5ef45959553d6/ae80136365ca98b56de3c66d48725000/Screen_Shot_2021-01-21_at_10.09.31_AM.png)
