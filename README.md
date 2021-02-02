@@ -27,7 +27,7 @@ A chatbot that will answer any questions that are asked on a Mattermost server.
 
 # Company Mentors
 
-Mentors: Kathryn Rebecca Servaites, Ian Cannon, Colin Leong (colin.leong@udri.udayton.edu)
+Mentors: Kathryn Rebecca Servaites, Ian Cannon, Colin Leong, Alexander Graves
 
 Company name: UD Research Institute 
 
@@ -99,10 +99,13 @@ Below is the example of the Trello board timeline (Gantt chart) with sprint cycl
 * Regular product owner meetings
 
 # Team Activities
+
+* Set up flowchart describing the overall process
 * Set up Mattermost Server
-* Set up Database (AWS or Azure)
+* Set up Database (Amazon RDS or DynamoDB)
 * Set up API
 * Connect Mattermost and Database
+* Learn how existing Python chatbots function
 * Train chatbot
 
 # Use Case Diagram
