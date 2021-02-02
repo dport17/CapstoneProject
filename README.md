@@ -108,6 +108,10 @@ Below is the example of the Trello board timeline (Gantt chart) with sprint cycl
 * Learn how existing Python chatbots function
 * Train chatbot
 
+# Flowchart of Chatbot Process
+
+![Flowchart](https://trello-attachments.s3.amazonaws.com/5faaedaf4b1bc338640acb11/60196585b257f670f0d21222/fa26c2d442d1acab9b4aa68a5303c778/Chatbot_FlowChart_Draft.png)
+
 # Use Case Diagram
 
 ![Use Case Diagram](https://trello-attachments.s3.amazonaws.com/60099e9b2e8fbb6c29146a6e/301x253/e56c2b8008bcd09ad5ae2ba0f9f12557/Capstone_II_Use_Case_Diagram.png)
