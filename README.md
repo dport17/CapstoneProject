@@ -52,12 +52,15 @@ quickly receive an answer.
 
 # High-level Requirements
 
-* Create a chatbot that will take questions from a user and send them to an API endpoint.
-* Get response from the RESTful API endpoint and display it in the chat
-* Store the questions and related answers in a database
-* The chatbot shall function in a Mattermost application
-* GitLab or GitHub repository (because private repo can be used for free) to house code and changes
-* Python programming language
+* Base Goals
+	- Create a chatbot that will take questions from a user and send them to an API endpoint.
+	- Get response from the RESTful API endpoint and display it in the chat.
+	- The chatbot shall function in a Mattermost application.
+	- Python programming language.
+	- Bitbucket repository (because private repo can be used for free) to house code and changes.
+* Extended Goals
+    - Store the questions and related answers in a database.
+	- Organize similar questions, determine which ones received desired answer.
 
 
 # Technology
@@ -69,7 +72,7 @@ quickly receive an answer.
 * Docker
 * Conda (Python package manager)
 * Unit and functional testing
-* GitLab
+* Bitbucket
 * Database management
 * Linux, preferably Ubuntu 18 (Can install a partition on computer; use VM; Windows Subsystem for Linux)
 * VS Code (preferred IDE)
@@ -102,10 +105,11 @@ Below is the example of the Trello board timeline (Gantt chart) with sprint cycl
 
 * Set up flowchart describing the overall process
 * Set up Mattermost Server
-* Set up Database (Amazon RDS or DynamoDB)
-* Set up API
+* Set up Database (Amazon RDS or DynamoDB). This will be a long-term goal, separate from a base goal of providing the chatbot.
+* Set up API via OpenAPI/SwaggerHub
+* Work with outgoing and incoming webhooks in Mattermost to integrate our external application (the chatbot).
 * Connect Mattermost and Database
-* Learn how existing Python chatbots function
+* Learn how existing Python chatbots function - Study and track open source code for similar projects.
 * Train chatbot
 
 # Flowchart of Chatbot Process
