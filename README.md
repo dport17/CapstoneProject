@@ -146,3 +146,6 @@ Below is the example of the Trello board timeline (Gantt chart) with sprint cycl
 # System Design
 ## Use Case Realization
 Our uses cases are realized in the implementation of our chatbot and how we created a flowchart.
+
+# Acknowledgements
+We would like to thank UDRI for the oppurtunity to work on this project and Professor Phung for the continued support we have recieved throughout this release.
