@@ -95,12 +95,12 @@ Below is the example of the Trello board timeline (Gantt chart) with sprint cycl
 ![Spring 2021 Timeline on Trello](https://capstones-cs-udayton.bitbucket.io/imgs/trello.png "Spring 2021 Timeline")
 
 
-
 # Company Support
 
 * API endpoint in which to send the questions and receive answers
 * Guidance on how to use the different technologies
 * Regular product owner meetings
+
 
 # Team Activities
 
@@ -112,6 +112,22 @@ Below is the example of the Trello board timeline (Gantt chart) with sprint cycl
 * Connect Mattermost and Database
 * Learn how existing Python chatbots function - Study and track open source code for similar projects.
 * Train chatbot
+
+
+# Contributions: 
+
+1.  Sydney Jenkins, 1200 minutes, contributed in OpenAPI research, MatterMost research, presentation, report
+2.  David Puzder, 1200 minutes, contributed in OpenAPI research, MatterMost research, use cases, webhooks, 
+3.  Devin Porter, 1200 minutes, contributed in OpenAPI research, MatterMost research, presentation, database
+4.  Brandon Wong, 1200 minutes, contributed in OpenAPI research, MatterMost research, use cases, Trello
+
+# Release Retrospective:
+
+* Release retrospective for Release 1:
+	* Sprint 0 consisted of meeting with UDRI to discuss first steps of the project, putting together our use case diagram and descriptions, and updating our Trello board accordingly.
+	* Sprint 1 consisted of developing a flowchart describing the logic behind our project and set up the MatterMost server.
+	* Sprint 2 consisted of setting up the AWS database and learning about incoming and outgoing webhooks using Mattermost.
+	* Sprint 3 consisted of experimenting with SwaggerHub, learning more about OpenAPI (RESTful API), and learning more about outgoing webhooks.
 
 # Flowchart of Chatbot Process
 
