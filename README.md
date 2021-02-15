@@ -31,7 +31,7 @@ Mentors: Kathryn Rebecca Servaites, Ian Cannon, Colin Leong, Alexander Graves
 
 Company name: UD Research Institute 
 
-## Project homepage
+# Project homepage
 
 Homepage: <https://cps491s21-team1.bitbucket.io//>
 
@@ -50,7 +50,8 @@ central location that is accessible and searchable. Our solution to this problem
 question-answer system in a chat application. This way, a researcher can type a question and
 quickly receive an answer.
 
-# High-level Requirements
+# System Analysis
+## High-level Requirements
 
 * Base Goals
 	- Create a chatbot that will take questions from a user and send them to an API endpoint.
@@ -63,7 +64,7 @@ quickly receive an answer.
 	- Organize similar questions, determine which ones received desired answer.
 
 
-# Technology
+## Technology
 
 * Swagger
 * RESTful API
@@ -125,3 +126,7 @@ Below is the example of the Trello board timeline (Gantt chart) with sprint cycl
 
 ![Ask Question Use Case](https://trello-attachments.s3.amazonaws.com/5faaedaf4b1bc338640acb11/6009997fffd5ef45959553d6/6824156bc97d505be7e5e802cc21b234/Screen_Shot_2021-01-21_at_10.09.11_AM.png)
 ![Ask Question Use Case](https://trello-attachments.s3.amazonaws.com/5faaedaf4b1bc338640acb11/6009997fffd5ef45959553d6/ae80136365ca98b56de3c66d48725000/Screen_Shot_2021-01-21_at_10.09.31_AM.png)
+
+# System Design
+## Use Case Realization
+Our uses cases are realized in the implementation of our chatbot and how we created a flowchart.
