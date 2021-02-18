@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+import requests
 
 app = Flask(__name__)
 
@@ -27,4 +28,12 @@ def multiplyBy10(num):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # app.run(debug=True)
+    url = 'https://udricapstone.cloud.mattermost.com/hooks/wnojm45ppbb7ie8tzfhx8841nw'
+    myobj = {'text': 'Successfully posted a messeage from a python program to Mattermost!'}
+
+    result = requests.post(url, json = myobj)
+
+    print(result.text)
+
+
