@@ -3,6 +3,7 @@ import os
 import sys
 from io import BytesIO
 import json
+import requests
 
 from flask import jsonify, request, Flask
 from flask_cors import CORS, cross_origin
@@ -57,8 +58,14 @@ def receive_chat():
     print(request)
     text = request.json['text']
 
+
     response = UDRI_API(text)
+    url = 'https://udricapstone.cloud.mattermost.com/hooks/wnojm45ppbb7ie8tzfhx8841nw'
+
+    x = requests.post(url, data = jsonify(response))
+    print(x.text)
     return jsonify(response)
+
 
 
 def main():
