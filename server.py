@@ -62,7 +62,7 @@ def receive_chat():
     response = UDRI_API(text)
     url = 'https://udricapstone.cloud.mattermost.com/hooks/wnojm45ppbb7ie8tzfhx8841nw'
 
-    x = requests.post(url, data = jsonify(response))
+    x = requests.post(url, json = response)
     print(x.text)
     return jsonify(response)
 
