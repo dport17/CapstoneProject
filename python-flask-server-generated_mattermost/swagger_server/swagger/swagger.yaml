@@ -1,0 +1,65 @@
+openapi: 3.0.0
+info:
+  title: MattermostChatAPI
+  description: Handles questions from mattermost to UDRI endpoint
+  version: 1.0.0
+servers:
+- url: https://app.swaggerhub.com/apis/puzderd1/MattermostChatbot/1.0.0
+paths:
+  /receive_url:
+    post:
+      summary: creates a question.
+      operationId: receive_url_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/body'
+        required: true
+      responses:
+        "200":
+          description: Sucessfully created new question
+        "400":
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_400'
+      x-openapi-router-controller: swagger_server.controllers.default_controller
+components:
+  schemas:
+    body:
+      required:
+      - text
+      type: object
+      properties:
+        channel_id:
+          type: string
+        channel_name:
+          type: string
+        team_domain:
+          type: string
+        team_id:
+          type: string
+        post_id:
+          type: string
+        text:
+          type: string
+        timestamp:
+          type: string
+        token:
+          type: string
+        trigger_word:
+          type: string
+        user_id:
+          type: string
+        user_name:
+          type: string
+        file_ids:
+          type: string
+    inline_response_400:
+      type: object
+      properties:
+        message:
+          type: string
+
