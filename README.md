@@ -112,6 +112,7 @@ Below is the example of the Trello board timeline (Gantt chart) with sprint cycl
 * Connect Mattermost and Database
 * Learn how existing Python chatbots function - Study and track open source code for similar projects.
 * Train chatbot
+* Working with an example API from UDRI Team Member Alex
 
 
 # Contributions: 
