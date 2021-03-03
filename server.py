@@ -64,12 +64,6 @@ def receive_chat():
     newText = response['answer']
     print(newText)
 
-    url = 'https://udricapstone.cloud.mattermost.com/hooks/wnojm45ppbb7ie8tzfhx8841nw'
-
-    result = requests.post(url, json = {"text":newText})
-
-    print(result.text)
-
     return jsonify(response)
 
 
