@@ -61,10 +61,10 @@ def receive_chat():
 
     response = UDRI_API(text)
 
-    newText = response['answer']
-    print(newText)
+    print(response)
+    print (jsonify(response))
 
-    return jsonify(response)
+    return response
 
 
 
@@ -72,7 +72,7 @@ def main():
     """
     main( ) function exposed for pip whl build in setup/Make file.
     """
-    app.run(debug=True, host='0.0.0.0', port=CPORT)
+    app.run(debug=True, host='127.0.0.1', port=CPORT)
 
 
 if __name__ == '__main__':

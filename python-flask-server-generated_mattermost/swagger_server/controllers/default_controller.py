@@ -5,6 +5,7 @@ import requests
 from swagger_server.models.body import Body  # noqa: E501
 from swagger_server.models.inline_response400 import InlineResponse400  # noqa: E501
 from swagger_server import util
+from flask import jsonify
 
 
 def receive_url_post(body):  # noqa: E501
@@ -28,9 +29,12 @@ def receive_url_post(body):  # noqa: E501
 
     question = body['text']
     print(question)
-
     answer ="Hello "+str(user)+", thank you for your question! Here's what I found:\n "
-    answer = answer + getAnswer(question)
+
+    result = getAnswer(question)
+    result.json()
+    print(result)
+    answer = answer + result.answer
 
     jsonBody = {"text": answer}#, "response_type": "comment"}
 
@@ -47,8 +51,8 @@ def getAnswer(text):
     #call the UDRI API
     #grab the response from the JSON body returned
     #return that response
-    url = "http://0.0.0.0:18000/receive_chat"
-    jsonBody = {"text":text}
+    url = "http://127.0.0.1:18000/receive_chat"
+    jsonBody = {"text" : str(text)}
     result = requests.post(url, json = jsonBody)
 
-    return str(result['answer'])
+    return result
