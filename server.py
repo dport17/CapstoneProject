@@ -64,7 +64,7 @@ def receive_chat():
     print(response)
     print (jsonify(response))
 
-    return response
+    return jsonify(response)
 
 
 
