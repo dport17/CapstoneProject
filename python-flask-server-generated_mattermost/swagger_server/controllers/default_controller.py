@@ -21,20 +21,20 @@ def receive_url_post(body):  # noqa: E501
 
     :rtype: None
     """
-    # if connexion.request.is_json:
-    #     body = Body.from_dict(connexion.request.get_json())
+    if connexion.request.is_json:
+        body = Body.from_dict(connexion.request.get_json())
 
-    user = body['user_name']
+    user = body._user_name
     print(user)
 
-    question = body['text']
+    question = body._text
     print(question)
-    answer ="Hello "+str(user)+", thank you for your question! Here's what I found:\n "
+    answer ="Hello "+ user +", thank you for your question! Here's what I found:\n "
 
-    result = getAnswer(question)
-    result.json()
-    print(result)
-    answer = answer + result.answer
+    response = getAnswer(question)
+    print(response)
+    
+    answer = answer + response
 
     jsonBody = {"text": answer}#, "response_type": "comment"}
 
@@ -55,4 +55,5 @@ def getAnswer(text):
     jsonBody = {"text" : str(text)}
     result = requests.post(url, json = jsonBody)
 
-    return result
+    responseData = result.json()
+    return responseData['answer']
