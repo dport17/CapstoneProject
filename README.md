@@ -120,7 +120,7 @@ Below is the example of the Trello board timeline (Gantt chart) with sprint cycl
 1.  Sydney Jenkins, 3450 minutes, contributed in OpenAPI research, MatterMost research, presentation, report, UDRI liason, openAPI research
 2.  David Puzder, 3450 minutes, contributed in OpenAPI research, MatterMost research, use cases, webhooks, SwaggerHub API Blueprinting and codegen
 3.  Devin Porter, 3450 minutes, contributed in OpenAPI research, MatterMost research, presentation, database, endpoint functionality implementation, mock UDRI API call
-4.  Brandon Wong, 3450 minutes, contributed in OpenAPI research, MatterMost research, use cases, Trello, Demo testing, flask RESTful APIÿresearch
+4.  Brandon Wong, 3450 minutes, contributed in OpenAPI research, MatterMost research, use cases, Trello, Demo testing, flask RESTful API research
 
 # Release Retrospective:
 
