@@ -151,5 +151,12 @@ Below is the example of the Trello board timeline (Gantt chart) with sprint cycl
 ## Use Case Realization
 Our uses cases are realized in the implementation of our chatbot and how we created a flowchart.
 
+# Implementation
+Up to this point, we have implemented a simple, Swagger generated API endpoint which reacts to a POST request from any source with a valid JSON body. 
+
+Upon receving a valid POST request, the endpoint will send the question included in the JSON body to a mock UDRI API, which currently returns a random string. Our endpoint then posts the answer to the "Town Square" Mattermost chat room via a pre-configured incoming webhook.
+
 # Acknowledgements
 We would like to thank UDRI for the oppurtunity to work on this project and Professor Phung for the continued support we have recieved throughout this release.
+
+
