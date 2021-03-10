@@ -129,6 +129,9 @@ Below is the example of the Trello board timeline (Gantt chart) with sprint cycl
 	* Sprint 1 consisted of developing a flowchart describing the logic behind our project and set up the MatterMost server.
 	* Sprint 2 consisted of setting up the AWS database and learning about incoming and outgoing webhooks using Mattermost.
 	* Sprint 3 consisted of experimenting with SwaggerHub, learning more about OpenAPI (RESTful API), and learning more about outgoing webhooks.
+	* Sprint 4 consisted of SwaggerHub researching and Flask server endpoint experiementation
+	* Sprint 5 consisted of SwaggerHub blueprinting and codegen
+	* Sprint 6 consisted of Endpoint functionality implementation and mock UDRI API implementation all locally
 
 # Flowchart of Chatbot Process
 
