@@ -104,6 +104,7 @@ Below is the example of the Trello board timeline (Gantt chart) with sprint cycl
 
 # Team Activities
 
+* Research various APIs, Mattermost, and Swaggerhub
 * Set up flowchart describing the overall process
 * Set up Mattermost Server
 * Set up Database (Amazon RDS or DynamoDB). This will be a long-term goal, separate from a base goal of providing the chatbot.
