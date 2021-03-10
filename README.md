@@ -120,7 +120,7 @@ Below is the example of the Trello board timeline (Gantt chart) with sprint cycl
 1.  Sydney Jenkins, 3450 minutes, contributed in OpenAPI research, MatterMost research, presentation, report, UDRI liason, openAPI research
 2.  David Puzder, 3450 minutes, contributed in OpenAPI research, MatterMost research, use cases, webhooks, SwaggerHub API Blueprinting and codegen
 3.  Devin Porter, 3450 minutes, contributed in OpenAPI research, MatterMost research, presentation, database, endpoint functionality implementation, mock UDRI API call
-4.  Brandon Wong, 3450 minutes, contributed in OpenAPI research, MatterMost research, use cases, Trello, Demo testing, flask RESTful APIÂ research
+4.  Brandon Wong, 3450 minutes, contributed in OpenAPI research, MatterMost research, use cases, Trello, Demo testing, flask RESTful APIÿresearch
 
 # Release Retrospective:
 
@@ -149,7 +149,7 @@ Below is the example of the Trello board timeline (Gantt chart) with sprint cycl
 
 # System Design
 ## Use Case Realization
-Our uses cases are realized in the implementation of our chatbot and how we created a flowchart.
+In the flowchart and use case diagram above, we aim to show the logic from User's request to how an outgoing webhook on Mattermost will handle the request, communicate with UDRI's provided API, from which their API will send back a randomly generated response through an incoming webhook that will be displayed through Mattermost.
 
 # Implementation
 Up to this point, we have implemented a simple, Swagger generated API endpoint which reacts to a POST request from any source with a valid JSON body. 
