@@ -51,7 +51,7 @@ def getAnswer(text):
     #call the UDRI API
     #grab the response from the JSON body returned
     #return that response
-    url = "https://cps-491-mattermost-chatbot.herokuapp.com/recieve_chat"
+    url = "https://cps-491-mattermost-chatbot.herokuapp.com/receive_chat"
     jsonBody = {"text" : str(text)}
     result = requests.post(url, json = jsonBody)
 
