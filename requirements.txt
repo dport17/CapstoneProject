@@ -3,3 +3,4 @@ Flask
 flask-cors
 requests
 essential_generators
+gunicorn==19.9.0
