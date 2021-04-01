@@ -7,8 +7,8 @@ from swagger_server.models.inline_response400 import InlineResponse400  # noqa: 
 from swagger_server import util
 from flask import jsonify
 
-
 def receive_url_post(body):  # noqa: E501
+
     print("The receive_url_post has received the body.")
     print("\n")
     print(body)

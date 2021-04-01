@@ -9,10 +9,10 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 
 RUN pip3 install connexion[swagger-ui]
 
+# RUN gunicorn --bind 0.0.0.0:$PORT wsgi
+
 COPY . /usr/src/app
 
-EXPOSE 8080
+# ENTRYPOINT ["python3"]
 
-ENTRYPOINT ["python3"]
-
-CMD ["-m", "swagger_server"]
+CMD ["python3", "-m", "swagger_server", "gunicorn --bind 0.0.0.0:$PORT wsgi"]
