@@ -14,7 +14,7 @@ class Body(Model):
 
     Do not edit the class manually.
     """
-    def __init__(self, channel_id: str=None, channel_name: str=None, team_domain: str=None, team_id: str=None, post_id: str=None, text: str=None, timestamp: str=None, token: str=None, trigger_word: str=None, user_id: str=None, user_name: str=None, file_ids: str=None):  # noqa: E501
+    def __init__(self, channel_id: str=None, channel_name: str=None, team_domain: str=None, team_id: str=None, post_id: str=None, text: str=None, timestamp: int=None, token: str=None, trigger_word: str=None, user_id: str=None, user_name: str=None, file_ids: str=None):  # noqa: E501
         """Body - a model defined in Swagger
 
         :param channel_id: The channel_id of this Body.  # noqa: E501
@@ -30,7 +30,7 @@ class Body(Model):
         :param text: The text of this Body.  # noqa: E501
         :type text: str
         :param timestamp: The timestamp of this Body.  # noqa: E501
-        :type timestamp: str
+        :type timestamp: int
         :param token: The token of this Body.  # noqa: E501
         :type token: str
         :param trigger_word: The trigger_word of this Body.  # noqa: E501
@@ -49,7 +49,7 @@ class Body(Model):
             'team_id': str,
             'post_id': str,
             'text': str,
-            'timestamp': str,
+            'timestamp': int,
             'token': str,
             'trigger_word': str,
             'user_id': str,
@@ -224,22 +224,22 @@ class Body(Model):
         self._text = text
 
     @property
-    def timestamp(self) -> str:
+    def timestamp(self) -> int:
         """Gets the timestamp of this Body.
 
 
         :return: The timestamp of this Body.
-        :rtype: str
+        :rtype: int
         """
         return self._timestamp
 
     @timestamp.setter
-    def timestamp(self, timestamp: str):
+    def timestamp(self, timestamp: int):
         """Sets the timestamp of this Body.
 
 
         :param timestamp: The timestamp of this Body.
-        :type timestamp: str
+        :type timestamp: int
         """
 
         self._timestamp = timestamp

@@ -46,7 +46,7 @@ components:
         text:
           type: string
         timestamp:
-          type: string
+          type: integer
         token:
           type: string
         trigger_word:
