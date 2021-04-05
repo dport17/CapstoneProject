@@ -153,9 +153,20 @@ Below is the example of the Trello board timeline (Gantt chart) with sprint cycl
 In the flowchart and use case diagram above, we aim to show the logic from User's request to how an outgoing webhook on Mattermost will handle the request, communicate with UDRI's provided API, from which their API will send back a randomly generated response through an incoming webhook that will be displayed through Mattermost.
 
 # Implementation
+## Release 2
 Up to this point, we have implemented a simple, Swagger generated API endpoint which reacts to a POST request from any source with a valid JSON body. 
-
 Upon receving a valid POST request, the endpoint will send the question included in the JSON body to a mock UDRI API, which currently returns a random string. Our endpoint then posts the answer to the "Town Square" Mattermost chat room via a pre-configured incoming webhook.
+
+## Release 3
+Now we have deployed our Swagger generated API onto Heroku after Dockerizing our code. We have also deployed UDRI's mock API onto Heroku using the method used in Capstone I. In one case, we needed a Dockerfile which laid out commands needed to run our application. In the other case, we needed a Procfile which also specified how run our application without Docker.
+
+![Dockerfile](https://trello-attachments.s3.amazonaws.com/5f58131b90edaf09eab4ac6b/606b74040dbe628942e68885/3bb6878bc0f58655007b88832e47205a/dockerfile.JPG)
+
+In the main file in which we did our coding (default_controller.py), there were two main sections. the receive_url_post method which contains what will be executed once a POST request is made to https://udri-chatbot.herokuapp.com/apis/puzderd1/MattermostChatbot/1.0.0/receive_url.
+The other section is the getAnswer method in which we specify which other endpoint we are trying to reach. In our case, it is https://cps-491-mattermost-chatbot.herokuapp.com/receive_chat, which is the UDRI mock API.
+
+![Dockerfile](https://trello-attachments.s3.amazonaws.com/5f58131b90edaf09eab4ac6b/606b74040dbe628942e68885/3f95b2424769fcdd743fde1bdb9408a8/receiveURL.JPG)
+![Dockerfile](https://trello-attachments.s3.amazonaws.com/5f58131b90edaf09eab4ac6b/606b74040dbe628942e68885/d87bf09141d87e96b96b67e95ec1cd21/getAnswer.JPG)
 
 # Acknowledgements
 We would like to thank UDRI for the oppurtunity to work on this project and Professor Phung for the continued support we have recieved throughout this release.
