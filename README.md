@@ -1,3 +1,5 @@
+# CPS 491 - Capstone II
+
 University of Dayton
 
 Department of Computer Science
@@ -7,12 +9,10 @@ CPS 491 Capstone II - Spring 2021
 Team 1
 
 
-## Capstone II
+## Capstone II Project
 
 
-# Project Topic
-
-Mattermost Chat Bot - Question Answer System
+# Mattermost Chat Bot - Question Answer System
 A chatbot that will answer any questions that are asked on a Mattermost server.
 
 
