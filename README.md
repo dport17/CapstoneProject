@@ -35,6 +35,12 @@ Company name: UD Research Institute
 
 Homepage: <https://cps491s21-team1.bitbucket.io//>
 
+# Project Management Information
+
+BitBucket Repository URL: <https://bitbucket.org/cps491s21-team1/cps491s21t1-src/src/master/>
+
+Trello URL: <https://trello.com/b/M0fvt0rZ/cps491s21-team1/>
+
 
 # Overview
 
@@ -63,6 +69,19 @@ quickly receive an answer.
     - Store the questions and related answers in a database.
 	- Organize similar questions, determine which ones received desired answer.
 
+## Use Case Diagram
+
+![Use Case Diagram](https://trello-attachments.s3.amazonaws.com/60099e9b2e8fbb6c29146a6e/301x253/e56c2b8008bcd09ad5ae2ba0f9f12557/Capstone_II_Use_Case_Diagram.png)
+
+## Use Case Descriptions
+
+![Ask Question Use Case](https://trello-attachments.s3.amazonaws.com/5faaedaf4b1bc338640acb11/6009997fffd5ef45959553d6/6824156bc97d505be7e5e802cc21b234/Screen_Shot_2021-01-21_at_10.09.11_AM.png)
+![Ask Question Use Case](https://trello-attachments.s3.amazonaws.com/5faaedaf4b1bc338640acb11/6009997fffd5ef45959553d6/ae80136365ca98b56de3c66d48725000/Screen_Shot_2021-01-21_at_10.09.31_AM.png)
+
+## Flowchart of Chatbot Process
+
+![Flowchart](https://trello-attachments.s3.amazonaws.com/5faaedaf4b1bc338640acb11/60196585b257f670f0d21222/fa26c2d442d1acab9b4aa68a5303c778/Chatbot_FlowChart_Draft.png)
+
 
 ## Technology
 
@@ -77,22 +96,6 @@ quickly receive an answer.
 * Database management
 * Linux, preferably Ubuntu 18 (Can install a partition on computer; use VM; Windows Subsystem for Linux)
 * VS Code (preferred IDE)
-
-
-# Project Management
-
-BitBucket Repository URL: <https://bitbucket.org/cps491s21-team1/cps491s21t1-src/src/master/>
-
-Trello URL: <https://trello.com/b/M0fvt0rZ/cps491s21-team1/>
-
-We will follow the Scrum approach, thus your team needs to identify the task in each sprint cycles, team meeting schedules, including this Fall and next Spring semester. The planned schedule and sprint cycles for Spring 2021 are as follows. 
-
-![Spring 2021 Timeline](https://capstones-cs-udayton.bitbucket.io/imgs/cps491s21timeline.png "Spring 2021 Timeline")
-
-
-Below is the example of the Trello board timeline (Gantt chart) with sprint cycles but without tasks for Spring 2021: 
-
-![Spring 2021 Timeline on Trello](https://capstones-cs-udayton.bitbucket.io/imgs/trello.png "Spring 2021 Timeline")
 
 
 # Company Support
@@ -116,6 +119,41 @@ Below is the example of the Trello board timeline (Gantt chart) with sprint cycl
 * Working with an example API from UDRI Team Member Alex
 
 
+# System Design
+## Use Case Realization
+In the flowchart and use case diagram above, we aim to show the logic from User's request to how an outgoing webhook on Mattermost will handle the request, communicate with UDRI's provided API, from which their API will send back a randomly generated response through an incoming webhook that will be displayed through Mattermost.
+
+## User Interface
+In order to call the chatbot, the user will use the #ask trigger word followed by the question in the Mattermost server
+![UI](https://trello-attachments.s3.amazonaws.com/5faaedaf4b1bc338640acb41/950x248/6495ba8f12110ceaae410aa78bd13ff8/Screen_Shot_2021-04-13_at_10.04.44_AM.png)
+
+# Implementation
+## Release 2
+Up to this point, we have implemented a simple, Swagger generated API endpoint which reacts to a POST request from any source with a valid JSON body. 
+Upon receving a valid POST request, the endpoint will send the question included in the JSON body to a mock UDRI API, which currently returns a random string. Our endpoint then posts the answer to the "Town Square" Mattermost chat room via a pre-configured incoming webhook.
+
+## Release 3
+Now we have deployed our Swagger generated API onto Heroku after Dockerizing our code. We have also deployed UDRI's mock API onto Heroku using the method used in Capstone I. In one case, we needed a Dockerfile which laid out commands needed to run our application. In the other case, we needed a Procfile which also specified how run our application without Docker.
+
+![Dockerfile](https://trello-attachments.s3.amazonaws.com/5f58131b90edaf09eab4ac6b/606b74040dbe628942e68885/3bb6878bc0f58655007b88832e47205a/dockerfile.JPG)
+
+In the main file in which we did our coding (default_controller.py), there were two main sections. the receive_url_post method which contains what will be executed once a POST request is made to https://udri-chatbot.herokuapp.com/apis/puzderd1/MattermostChatbot/1.0.0/receive_url.
+The other section is the getAnswer method in which we specify which other endpoint we are trying to reach. In our case, it is https://cps-491-mattermost-chatbot.herokuapp.com/receive_chat, which is the UDRI mock API.
+
+![Dockerfile](https://trello-attachments.s3.amazonaws.com/5f58131b90edaf09eab4ac6b/606b74040dbe628942e68885/3f95b2424769fcdd743fde1bdb9408a8/receiveURL.JPG)
+![Dockerfile](https://trello-attachments.s3.amazonaws.com/5f58131b90edaf09eab4ac6b/606b74040dbe628942e68885/d87bf09141d87e96b96b67e95ec1cd21/getAnswer.JPG)
+
+# Software Process Management
+
+We will follow the Scrum approach, thus your team needs to identify the task in each sprint cycles, team meeting schedules, including this Fall and next Spring semester. The planned schedule and sprint cycles for Spring 2021 are as follows. 
+
+![Spring 2021 Timeline](https://capstones-cs-udayton.bitbucket.io/imgs/cps491s21timeline.png "Spring 2021 Timeline")
+
+
+Below is the example of the Trello board timeline (Gantt chart) with sprint cycles but without tasks for Spring 2021: 
+
+![Spring 2021 Timeline on Trello](https://capstones-cs-udayton.bitbucket.io/imgs/trello.png "Spring 2021 Timeline")
+
 # Contributions: 
 
 1.  Sydney Jenkins, 3900 minutes, contributed in OpenAPI research, MatterMost research, presentation, report, UDRI liason, openAPI research, presentation preparation
@@ -134,39 +172,6 @@ Below is the example of the Trello board timeline (Gantt chart) with sprint cycl
 	* Sprint 5 consisted of SwaggerHub blueprinting and codegen
 	* Sprint 6 consisted of Endpoint functionality implementation and mock UDRI API implementation all locally
 
-# Flowchart of Chatbot Process
-
-![Flowchart](https://trello-attachments.s3.amazonaws.com/5faaedaf4b1bc338640acb11/60196585b257f670f0d21222/fa26c2d442d1acab9b4aa68a5303c778/Chatbot_FlowChart_Draft.png)
-
-# Use Case Diagram
-
-![Use Case Diagram](https://trello-attachments.s3.amazonaws.com/60099e9b2e8fbb6c29146a6e/301x253/e56c2b8008bcd09ad5ae2ba0f9f12557/Capstone_II_Use_Case_Diagram.png)
-
-
-# Use Case Descriptions
-
-![Ask Question Use Case](https://trello-attachments.s3.amazonaws.com/5faaedaf4b1bc338640acb11/6009997fffd5ef45959553d6/6824156bc97d505be7e5e802cc21b234/Screen_Shot_2021-01-21_at_10.09.11_AM.png)
-![Ask Question Use Case](https://trello-attachments.s3.amazonaws.com/5faaedaf4b1bc338640acb11/6009997fffd5ef45959553d6/ae80136365ca98b56de3c66d48725000/Screen_Shot_2021-01-21_at_10.09.31_AM.png)
-
-# System Design
-## Use Case Realization
-In the flowchart and use case diagram above, we aim to show the logic from User's request to how an outgoing webhook on Mattermost will handle the request, communicate with UDRI's provided API, from which their API will send back a randomly generated response through an incoming webhook that will be displayed through Mattermost.
-
-# Implementation
-## Release 2
-Up to this point, we have implemented a simple, Swagger generated API endpoint which reacts to a POST request from any source with a valid JSON body. 
-Upon receving a valid POST request, the endpoint will send the question included in the JSON body to a mock UDRI API, which currently returns a random string. Our endpoint then posts the answer to the "Town Square" Mattermost chat room via a pre-configured incoming webhook.
-
-## Release 3
-Now we have deployed our Swagger generated API onto Heroku after Dockerizing our code. We have also deployed UDRI's mock API onto Heroku using the method used in Capstone I. In one case, we needed a Dockerfile which laid out commands needed to run our application. In the other case, we needed a Procfile which also specified how run our application without Docker.
-
-![Dockerfile](https://trello-attachments.s3.amazonaws.com/5f58131b90edaf09eab4ac6b/606b74040dbe628942e68885/3bb6878bc0f58655007b88832e47205a/dockerfile.JPG)
-
-In the main file in which we did our coding (default_controller.py), there were two main sections. the receive_url_post method which contains what will be executed once a POST request is made to https://udri-chatbot.herokuapp.com/apis/puzderd1/MattermostChatbot/1.0.0/receive_url.
-The other section is the getAnswer method in which we specify which other endpoint we are trying to reach. In our case, it is https://cps-491-mattermost-chatbot.herokuapp.com/receive_chat, which is the UDRI mock API.
-
-![Dockerfile](https://trello-attachments.s3.amazonaws.com/5f58131b90edaf09eab4ac6b/606b74040dbe628942e68885/3f95b2424769fcdd743fde1bdb9408a8/receiveURL.JPG)
-![Dockerfile](https://trello-attachments.s3.amazonaws.com/5f58131b90edaf09eab4ac6b/606b74040dbe628942e68885/d87bf09141d87e96b96b67e95ec1cd21/getAnswer.JPG)
 
 # Acknowledgements
 We would like to thank UDRI for the oppurtunity to work on this project and Professor Phung for the continued support we have recieved throughout this release.
