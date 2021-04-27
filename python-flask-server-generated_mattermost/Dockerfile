@@ -5,6 +5,7 @@ WORKDIR /usr/src/app
 
 COPY requirements.txt /usr/src/app/
 
+# Added "gunicorn==19.9.0" to requirements for port binding
 RUN pip3 install --no-cache-dir -r requirements.txt
 
 RUN pip3 install connexion[swagger-ui]
