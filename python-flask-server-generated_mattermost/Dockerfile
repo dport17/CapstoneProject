@@ -9,10 +9,8 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 
 RUN pip3 install connexion[swagger-ui]
 
-# RUN gunicorn --bind 0.0.0.0:$PORT wsgi
-
 COPY . /usr/src/app
 
-# ENTRYPOINT ["python3"]
-
+# EXPOSE <port> keyword does not work with Heroku because Heroku decides what port
+# our API runs on. To combat this, we bind their given port to $PORT and refer to it
 CMD ["python3", "-m", "swagger_server", "gunicorn --bind 0.0.0.0:$PORT wsgi"]
