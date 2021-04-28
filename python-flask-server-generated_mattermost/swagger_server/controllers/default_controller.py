@@ -1,13 +1,15 @@
 import connexion
 import six
 import requests
+import hashlib
 
 from swagger_server.models.body import Body  # noqa: E501
 from swagger_server.models.inline_response400 import InlineResponse400  # noqa: E501
 from swagger_server import util
 from flask import jsonify
-import hashlib
 
+# This is the Token provided in our Mattermost outgoing webhook after being hashed
+# NOTE: We got the hashed token by using "hashlib's documentation" and hashing it in our terminal
 MATTERMOST_HASHED_TOKEN = "c8a6dd3cbd5a94d7356d3cffad8a7f97f1d31b18d0590e7ad965bf87"
 
 def receive_url_post(body):  # noqa: E501
@@ -38,15 +40,22 @@ def receive_url_post(body):  # noqa: E501
     question = body._text
     print(question)
     answer ="Hello "+ user +", thank you for your question! Here's what I found:\n "
-    token = body._token
 
-    authorized = False
+    # ---------------- START Security Section ----------------
+    token = body._token
     token = str.encode(token)
+
+    # Default set token authorization to False.
+    # Checks if MATTERMOST_HASHED_TOKEN matches the token within the POST request
+    authorized = False
+
     if hashlib.sha224(token).hexdigest() == MATTERMOST_HASHED_TOKEN:
         print("Authorization granted.")
         authorized = True
 
-   
+    # ----------------- END Security Section -----------------
+
+    
     if authorized:
         user = body._user_name
 
@@ -72,7 +81,7 @@ def receive_url_post(body):  # noqa: E501
 
         return "Everything successful, reply sent"
 
-      # noqa: E501
+    # noqa: E501
     else:
         return "ACCESS DENIED WEE OOO WEE OOO"
     
