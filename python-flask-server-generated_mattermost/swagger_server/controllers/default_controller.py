@@ -6,6 +6,9 @@ from swagger_server.models.body import Body  # noqa: E501
 from swagger_server.models.inline_response400 import InlineResponse400  # noqa: E501
 from swagger_server import util
 from flask import jsonify
+import hashlib
+
+MATTERMOST_HASHED_TOKEN = "c8a6dd3cbd5a94d7356d3cffad8a7f97f1d31b18d0590e7ad965bf87"
 
 def receive_url_post(body):  # noqa: E501
 
@@ -35,25 +38,44 @@ def receive_url_post(body):  # noqa: E501
     question = body._text
     print(question)
     answer ="Hello "+ user +", thank you for your question! Here's what I found:\n "
+    token = body._token
 
-    response = getAnswer(question)
-    print(response)
-    
-    answer = answer + response
+    authorized = False
+    token = str.encode(token)
+    if hashlib.sha224(token).hexdigest() == MATTERMOST_HASHED_TOKEN:
+        print("Authorization granted.")
+        authorized = True
 
-    jsonBody = {"text": answer} #, "response_type": "comment"}
+   
+    if authorized:
+        user = body._user_name
 
-    # ------ This url represents the incoming webhook on Mattermost ------
-    url = 'https://udricapstone.cloud.mattermost.com/hooks/wnojm45ppbb7ie8tzfhx8841nw'
+        question = body._text
+        print(question)
+        answer ="Hello "+ user +", thank you for your question! Here's what I found:\n "
 
-    # ------------- Change the dotted section for future use -------------
+        response = getAnswer(question)
+        print(response)
+        
+        answer = answer + response
 
-    result = requests.post(url, json = jsonBody)
+        jsonBody = {"text": answer} #, "response_type": "comment"}
 
-    print(result.text)
+        # ------ This url represents the incoming webhook on Mattermost ------
+        url = 'https://udricapstone.cloud.mattermost.com/hooks/wnojm45ppbb7ie8tzfhx8841nw'
+
+        # ------------- Change the dotted section for future use -------------
+
+        result = requests.post(url, json = jsonBody)
+
+        print(result.text)
+
+        return "Everything successful, reply sent"
 
       # noqa: E501
-    return 'This is the body I received: '+str(body)
+    else:
+        return "ACCESS DENIED WEE OOO WEE OOO"
+    
 
 def getAnswer(text):
     # call the UDRI API and grab the response from the JSON body returned
