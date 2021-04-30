@@ -145,12 +145,12 @@ The other section is the getAnswer method in which we specify which other endpoi
 
 # Software Process Management
 
-We will follow the Scrum approach, thus your team needs to identify the task in each sprint cycles, team meeting schedules, including this Fall and next Spring semester. The planned schedule and sprint cycles for Spring 2021 are as follows. 
+We will follow the Scrum approach, thus our team identified each task in each sprint cycles. The planned schedule and sprint cycles for Spring 2021 are as follows. 
 
 ![Spring 2021 Timeline](https://capstones-cs-udayton.bitbucket.io/imgs/cps491s21timeline.png "Spring 2021 Timeline")
 
 
-Below is the example of the Trello board timeline (Gantt chart) with sprint cycles but without tasks for Spring 2021: 
+Below is our Trello board timeline (Gantt chart) with sprint cycles but without tasks for Spring 2021: 
 
 ![Spring 2021 Timeline on Trello](https://capstones-cs-udayton.bitbucket.io/imgs/trello.png "Spring 2021 Timeline")
 
