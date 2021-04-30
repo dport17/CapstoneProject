@@ -71,12 +71,12 @@ quickly receive an answer.
 
 ## Use Case Diagram
 
-![Use Case Diagram](https://trello-attachments.s3.amazonaws.com/60099e9b2e8fbb6c29146a6e/301x253/e56c2b8008bcd09ad5ae2ba0f9f12557/Capstone_II_Use_Case_Diagram.png)
+![Use Case Diagram](https://trello-attachments.s3.amazonaws.com/60099e9b2e8fbb6c29146a6e/211x180/c6d425882a18bfc5f5691e84e6a47693/Untitled_Diagram.png)
 
 ## Use Case Descriptions
 
 ![Ask Question Use Case](https://trello-attachments.s3.amazonaws.com/5faaedaf4b1bc338640acb11/6009997fffd5ef45959553d6/6824156bc97d505be7e5e802cc21b234/Screen_Shot_2021-01-21_at_10.09.11_AM.png)
-![Ask Question Use Case](https://trello-attachments.s3.amazonaws.com/5faaedaf4b1bc338640acb11/6009997fffd5ef45959553d6/ae80136365ca98b56de3c66d48725000/Screen_Shot_2021-01-21_at_10.09.31_AM.png)
+
 
 ## Flowchart of Chatbot Process
 
